@@ -1,0 +1,22 @@
+{
+  "name": "norwegian-birth-number-validator",
+  "version": "1.0.0",
+  "title": "Norwegian birth number validator",
+  "description": "Validates Norwegian birth numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanp/norwegian-birth-number-validator.git"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Jonathan Persson <persson.jonathan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "4.7.0"
+  }
+}
