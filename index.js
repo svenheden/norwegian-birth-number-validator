@@ -1,4 +1,4 @@
-const pattern = /^\d{6}-\d{5}$/;
+const pattern = /^\d{6}-?\d{5}$/;
 const firstCheckDigitMultipliers = [3, 7, 6, 1, 8, 9, 4, 5, 2, 1];
 const secondCheckDigitMultipliers = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2, 1];
 

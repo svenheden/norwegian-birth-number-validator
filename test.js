@@ -20,9 +20,9 @@ test('birth numbers with a correct checksum but incorrect date', assert => {
 
 test('valid birth numbers', assert => {
   assert.ok(isValid('151210-15649'));
-  assert.ok(isValid('030984-43559'));
+  assert.ok(isValid('03098443559'));
   assert.ok(isValid('210816-33352'));
-  assert.ok(isValid('160745-30617'));
+  assert.ok(isValid('16074530617'));
   assert.ok(isValid('270755-32585'));
   assert.end();
 });
