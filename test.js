@@ -1,5 +1,5 @@
 const test = require('tape');
-const isValid = require('./index');
+const { isValid } = require('./dist');
 
 test('birth numbers in an erroneous format', assert => {
   assert.notOk(isValid('12345'));

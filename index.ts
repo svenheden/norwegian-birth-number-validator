@@ -2,9 +2,9 @@ const pattern = /^\d{6}-?\d{5}$/;
 const firstCheckDigitMultipliers = [3, 7, 6, 1, 8, 9, 4, 5, 2, 1];
 const secondCheckDigitMultipliers = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2, 1];
 
-const hasCorrectPattern = input => pattern.test(input);
+const hasCorrectPattern = (input: string) => pattern.test(input);
 
-const hasCorrectChecksum = (input, multipliers) => {
+const hasCorrectChecksum = (input: string, multipliers: number[]) => {
   const multiplicands = input.split('').map(Number);
 
   const sum = multipliers
@@ -14,19 +14,22 @@ const hasCorrectChecksum = (input, multipliers) => {
   return sum % 11 === 0;
 }
 
-const hasValidDate = input => {
-  let [_, day, month, year] = /^(\d{2})(\d{2})(\d{2})/.exec(input);
+const hasValidDate = (input: string) => {
+  let [_, dayStr, monthStr, yearStr] = /^(\d{2})(\d{2})(\d{2})/.exec(input);
 
-  year = Number(year);
-  month = Number(month) - 1;
-  day = Number(day);
-
+  const year = Number(yearStr);
+  const month = Number(monthStr) - 1;
+  const day = Number(dayStr);
   const date = new Date(year, month, day);
 
-  return date.getYear() === year && date.getMonth() === month && date.getDate() === day;
+  const yearIsValid = String(date.getFullYear()).substr(-2) === yearStr;
+  const monthIsValid = date.getMonth() === month;
+  const dayIsValid = date.getDate() === day;
+
+  return yearIsValid && monthIsValid && dayIsValid;
 }
 
-const isValidNorwegianBirthNumber = input => {
+export const isValid = (input: string) => {
   const cleaned = input.replace(/\D/g, '');
 
   return (
@@ -36,5 +39,3 @@ const isValidNorwegianBirthNumber = input => {
     hasValidDate(cleaned)
   );
 }
-
-module.exports = isValidNorwegianBirthNumber;

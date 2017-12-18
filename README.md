@@ -16,7 +16,7 @@ $ npm install --save norwegian-birth-number-validator
 ## Usage
 
 ```js
-const isValid = require('norwegian-birth-number-validator');
+import { isValid } from 'norwegian-birth-number-validator';
 
 isValid('foobar') // => false
 ```
