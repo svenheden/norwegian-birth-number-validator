@@ -1,6 +1,6 @@
 {
   "name": "norwegian-birth-number-validator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "title": "Norwegian birth number validator",
   "description": "Validates Norwegian birth numbers",
   "main": "dist/index.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanp/norwegian-birth-number-validator.git"
+    "url": "https://github.com/svenheden/norwegian-birth-number-validator.git"
   },
   "engines": {
     "node": ">=6.0.0"
   },
-  "author": "Jonathan Persson <persson.jonathan@gmail.com>",
+  "author": "Jonathan Svenheden <jonathan@svenheden.com>",
   "license": "MIT",
   "devDependencies": {
     "tape": "4.8.0",
